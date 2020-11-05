@@ -19,7 +19,6 @@ const App = () => {
           .filter(({ ano }) => ano >= 1998)
           .map(({ nome, ano }) => (
             <li key={nome}>
-              {' '}
               {nome} {ano}
             </li>
           ))}
