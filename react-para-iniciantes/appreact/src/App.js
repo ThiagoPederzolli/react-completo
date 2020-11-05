@@ -1,7 +1,9 @@
-import './App.css';
-
 const App = () => {
-  return <div>Meu App</div>;
+  return (
+    <a className="ativo" href="https://origamid.com" title="isso é um site">
+      Origamid
+    </a>
+  );
 };
 
 export default App;
