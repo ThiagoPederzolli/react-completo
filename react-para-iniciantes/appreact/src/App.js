@@ -1,34 +1,24 @@
-import React from 'react'
-import Form from './Form/Form'
+import React from 'react';
+import Header from './Header';
+import Home from './Home';
+import Produtos from './Produtos';
 
-function App() {
+const App = () => {
+  const { pathname } = window.location;
+
+  let Component;
+  if (pathname === '/produtos') {
+    Component = Produtos;
+  } else {
+    Component = Home;
+  }
+
   return (
-    <div>
-      <Form />
-    </div>
-  )
-}
+    <section>
+      <Header />
+      <Component />
+    </section>
+  );
+};
 
-export default App
-
-
-
-// // const Titulo = ({cor, texto}) => {
-// //   return <h1 style={{color: cor}}>{texto}</h1>
-// // }
-
-// const Titulo = (props) => {
-//   return <h1>{props.children}</h1>
-// }
-
-// const App = () => {
-//   return (
-//     <div>
-//       <Titulo>Meu título 1</Titulo> 
-//       <Titulo>
-//         <p>Meu título 2</p>
-//         <p>Meu título 3</p>
-//       </Titulo>
-//     </div>
-//   )
-// }
+export default App;
