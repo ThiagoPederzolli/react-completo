@@ -1,17 +1,34 @@
-import React from 'react';
-import Header from './Header';
-import Footer from './Footer';
-import Form from './Form';
+import React from 'react'
+import Form from './Form/Form'
 
-const App = () => {
+function App() {
   return (
     <div>
-      <Header />
-      <p>Esse é o meu aplicativo</p>
       <Form />
-      <Footer />
     </div>
-  );
-};
+  )
+}
 
-export default App;
+export default App
+
+
+
+// // const Titulo = ({cor, texto}) => {
+// //   return <h1 style={{color: cor}}>{texto}</h1>
+// // }
+
+// const Titulo = (props) => {
+//   return <h1>{props.children}</h1>
+// }
+
+// const App = () => {
+//   return (
+//     <div>
+//       <Titulo>Meu título 1</Titulo> 
+//       <Titulo>
+//         <p>Meu título 2</p>
+//         <p>Meu título 3</p>
+//       </Titulo>
+//     </div>
+//   )
+// }
