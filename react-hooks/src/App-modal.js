@@ -3,7 +3,11 @@ import ButtonModal from './ButtonModal';
 import Modal from './Modal';
 
 function App() {
-  const [modal, setModal] = useState(false);
+  // const [modal, setModal] = useState(false);
+  const [modal, setModal] = useState(() => {
+    const ativo = window.localStorage.getItem('ativo');
+    return ativo;
+  });
   return (
     <div>
       <div>{modal ? 'Modal Aberto!' : 'Modal Fechado!'}</div>
