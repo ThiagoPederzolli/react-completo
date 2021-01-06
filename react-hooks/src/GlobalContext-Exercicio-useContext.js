@@ -8,7 +8,7 @@ export const GlobalStorage = ({children}) => {
   useEffect(() => {
     const fetchData = async () => {
       const produtoFav = window.localStorage.getItem('produto');
-      const response = await fetch(`https://ranekapi.origamid.dev/json/api/produto/${produtoFav}`);
+      const response = await fetch('https://ranekapi.origamid.dev/json/api/produto/');
       const produto = await response.json();
       setProduto(produto);
     }
